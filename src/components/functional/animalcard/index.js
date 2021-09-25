@@ -1,4 +1,6 @@
 import React from "react";
+import './index.css'
+import PropTypes from "prop-types";
 
 const AnimalCard = (props) => {
     const { name,
@@ -6,16 +8,16 @@ const AnimalCard = (props) => {
         size,
         diet,
         additional,
-        showAdditonal} = props
+        showAdditional} = props
     return (
-        <div>
+        <div className="animal-wrapper">
             <h2>{name}</h2>
             <h3>{scienticName}</h3>
             <h4>{size}</h4>
             <div>{diet.join(', ')}.</div>
             {additional && (
                 <button 
-                    onClick={() => showAdditonal(additional)}
+                    onClick={() => showAdditional(additional)}
                 >
                     More info
                 </button>
